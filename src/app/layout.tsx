@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 import { Providers } from "@/components/providers";
 import { NuqsAdapter } from "nuqs/adapters/next";
+import { Footer } from "@/components/footer";
+import { Nav } from "@/components/nav";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -37,12 +39,13 @@ const RootLayout = ({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
         <NuqsAdapter>
           <Providers>
+            <Nav />
             <main>{children}</main>
           </Providers>
         </NuqsAdapter>
+        <Footer />
       </body>
     </html>
   );
