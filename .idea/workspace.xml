@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25cb5d4e-50ff-41a8-9346-3b838b3edb56" name="Changes" comment="chore: init prettier config">
+    <list default="true" id="25cb5d4e-50ff-41a8-9346-3b838b3edb56" name="Changes" comment="chore: footer">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/providers.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,47 +21,53 @@
       <entry key="_/Users/ssynowiec/WebstormProjects/cocktails-solvro" value="3AaS8Rjpkmjy3uwVL1AMyYpKOQh" />
     </persistenceIdMap>
   </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myAllFileTypesSelected" value="true" />
-    <option name="mySelectedFileTypes">
-      <set />
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ssynowiec&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ssynowiec/solvro-cocktails.git&quot;,
+    &quot;accountId&quot;: &quot;2de5e5d1-071b-4468-860e-b0421cc89de8&quot;
+  }
+}</component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="3AaS8Rjpkmjy3uwVL1AMyYpKOQh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "js.buildTools.gulp.gulp_package_dir": "",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "/Users/ssynowiec/WebstormProjects/cocktails-solvro",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "/Users/ssynowiec/WebstormProjects/cocktails-solvro/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ssynowiec/WebstormProjects/cocktails-solvro&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/ssynowiec/WebstormProjects/cocktails-solvro/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.Next.js: server-side">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
@@ -93,7 +106,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772829029221</updated>
-      <workItem from="1772829030581" duration="1494000" />
+      <workItem from="1772829030581" duration="1947000" />
+      <workItem from="1772831034694" duration="17000" />
+      <workItem from="1772831071328" duration="6033000" />
+      <workItem from="1772916625642" duration="6477000" />
+      <workItem from="1773244113157" duration="1092000" />
+      <workItem from="1773250195759" duration="47000" />
+      <workItem from="1773251411219" duration="497000" />
+      <workItem from="1773252203267" duration="1378000" />
+      <workItem from="1773256705303" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="chore: update deps">
       <option name="closed" value="true" />
@@ -111,16 +132,81 @@
       <option name="project" value="LOCAL" />
       <updated>1772829919197</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="chore: init t3env config">
+      <option name="closed" value="true" />
+      <created>1772831625950</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772831625950</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore: remove default content">
+      <option name="closed" value="true" />
+      <created>1772832348382</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772832348382</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: init tanstack query config">
+      <option name="closed" value="true" />
+      <created>1772884654307</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772884654307</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: client providers">
+      <option name="closed" value="true" />
+      <created>1772885047551</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772885047552</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chore: add remote images config">
+      <option name="closed" value="true" />
+      <created>1772918740223</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772918740223</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chore: footer">
+      <option name="closed" value="true" />
+      <created>1773257263021</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1773257263021</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: update deps" />
     <MESSAGE value="chore: init prettier config" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: init prettier config" />
+    <MESSAGE value="chore: init t3env config" />
+    <MESSAGE value="chore: remove default content" />
+    <MESSAGE value="chore: init tanstack query config" />
+    <MESSAGE value="fix: client providers" />
+    <MESSAGE value="chore: add remote images config" />
+    <MESSAGE value="chore: footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: footer" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
