@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 import { Providers } from "@/components/providers";
+import { NuqsAdapter } from "nuqs/adapters/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -28,11 +29,20 @@ const RootLayout = ({
   children: ReactNode;
 }>) => {
   return (
-    <html lang="en" className={cn("font-sans", inter.variable)}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cn("font-sans", inter.variable)}
+    >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>{children}</Providers>
+        <NuqsAdapter>
+          <Providers>
+            <main>{children}</main>
+          </Providers>
+        </NuqsAdapter>
       </body>
     </html>
   );
