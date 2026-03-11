@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25cb5d4e-50ff-41a8-9346-3b838b3edb56" name="Changes" comment="chore: footer">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/providers.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="25cb5d4e-50ff-41a8-9346-3b838b3edb56" name="Changes" comment="chore: add shdacn components" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +106,7 @@
       <workItem from="1773251411219" duration="497000" />
       <workItem from="1773252203267" duration="1378000" />
       <workItem from="1773256705303" duration="598000" />
+      <workItem from="1773264360547" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="chore: update deps">
       <option name="closed" value="true" />
@@ -180,7 +172,55 @@
       <option name="project" value="LOCAL" />
       <updated>1773257263021</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="chore: new favicon">
+      <option name="closed" value="true" />
+      <created>1773264389699</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1773264389699</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: install jotai, next-themes, nuqs">
+      <option name="closed" value="true" />
+      <created>1773264425446</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1773264425446</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chore: nuqs, themes, jotai config/providers">
+      <option name="closed" value="true" />
+      <created>1773264505001</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1773264505001</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: meta">
+      <option name="closed" value="true" />
+      <created>1773264553245</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1773264553245</updated>
+    </task>
+    <task id="LOCAL-00013" summary="chore: add footer &amp; nav">
+      <option name="closed" value="true" />
+      <created>1773264584162</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1773264584162</updated>
+    </task>
+    <task id="LOCAL-00014" summary="chore: add shdacn components">
+      <option name="closed" value="true" />
+      <created>1773264614982</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1773264614982</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +246,13 @@
     <MESSAGE value="fix: client providers" />
     <MESSAGE value="chore: add remote images config" />
     <MESSAGE value="chore: footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: footer" />
+    <MESSAGE value="chore: new favicon" />
+    <MESSAGE value="chore: install jotai, next-themes, nuqs" />
+    <MESSAGE value="chore: nuqs, themes, jotai config/providers" />
+    <MESSAGE value="fix: meta" />
+    <MESSAGE value="chore: add footer &amp; nav" />
+    <MESSAGE value="chore: add shdacn components" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add shdacn components" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
