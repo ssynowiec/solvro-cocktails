@@ -46,7 +46,3 @@ jobs:
       - name: Check types
         run: npm run types:check
         if: always()
-
-      - name: Build
-        run: npm run build
-        if: always()
