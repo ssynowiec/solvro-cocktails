@@ -31,9 +31,13 @@ import { CocktailResponseSchema } from "@/types/cocktail";
 
 export function CocktailsList() {
   const { page, setPage } = usePage();
-  const [search, setSearch] = useQueryState("search", { defaultValue: "" });
+  const [search, setSearch] = useQueryState("search", {
+    defaultValue: "",
+    shallow: false,
+  });
   const [alcoholic] = useQueryState("alcoholic", {
     defaultValue: "",
+    shallow: false,
   });
   const [debouncedSearch] = useDebounce(search, 1000);
 
