@@ -3,11 +3,25 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import * as React from "react";
+import { useSyncExternalStore } from "react";
 
 import { Button } from "@/components/ui/button";
 
+const useIsMounted = () => {
+  return useSyncExternalStore(
+    // eslint-disable-next-line unicorn/consistent-function-scoping
+    () => () => {
+      /* empty */
+    },
+    () => true,
+    () => false,
+  );
+};
+
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+
+  const mounted = useIsMounted();
 
   return (
     <Button
@@ -17,8 +31,8 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
     >
-      {theme === "dark" && <Sun />}
-      {theme === "light" && <Moon />}
+      {mounted && theme === "dark" ? <Sun /> : null}
+      {mounted && theme === "light" ? <Moon /> : null}
     </Button>
   );
 }
