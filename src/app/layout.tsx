@@ -44,7 +44,7 @@ export default function RootLayout({
         <NuqsAdapter>
           <Providers>
             <Nav />
-            <main>{children}</main>
+            {children}
           </Providers>
         </NuqsAdapter>
         <Footer />
