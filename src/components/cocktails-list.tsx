@@ -1,10 +1,12 @@
 "use client";
 
-import { CocktailItem } from "@/components/cocktail-item";
-import { CocktailResponseSchema } from "@/types/cocktail";
 import { useQuery } from "@tanstack/react-query";
-import { env } from "@/env";
-import { usePage } from "@/hooks/usePage";
+import { useQueryState } from "nuqs";
+import type { ChangeEvent } from "react";
+import { useDebounce } from "use-debounce";
+
+import { CocktailItem } from "@/components/cocktail-item";
+import { Input } from "@/components/ui/input";
 import {
   Pagination,
   PaginationContent,
@@ -14,8 +16,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { Input } from "@/components/ui/input";
-import { Skeleton } from "@/components/ui/skeleton";
 import {
   Select,
   SelectContent,
@@ -24,32 +24,42 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useQueryState } from "nuqs";
-import { useDebounce } from "use-debounce";
-import { ChangeEvent } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { env } from "@/env";
+import { usePage } from "@/hooks/use-page";
+import { CocktailResponseSchema } from "@/types/cocktail";
 
-export const CocktailsList = () => {
+export function CocktailsList() {
   const { page, setPage } = usePage();
   const [search, setSearch] = useQueryState("search", { defaultValue: "" });
-  const [alcoholic, setAlcoholic] = useQueryState("alcoholic", {
+  const [alcoholic] = useQueryState("alcoholic", {
     defaultValue: "",
   });
   const [debouncedSearch] = useDebounce(search, 1000);
 
-  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearch(e.target.value);
-    setPage(1);
+  const handleSearchChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    await setSearch(event.target.value);
+    await setPage(1);
   };
 
   const { data: cocktails, isLoading } = useQuery({
-    queryKey: ["cocktails", page, debouncedSearch],
+    queryKey: ["cocktails", page, debouncedSearch, alcoholic],
     queryFn: async () => {
-      const res = await fetch(
-        `${env.NEXT_PUBLIC_API_URL}/cocktails/?page=${page}&alcoholic=${alcoholic}&name=%${debouncedSearch}%`,
+      const response = await fetch(
+        `${env.NEXT_PUBLIC_API_URL}/cocktails/?page=${page.toString()}&alcoholic=${alcoholic}&name=%${debouncedSearch}%`,
       );
-      const json = await res.json();
-      const parseResult = CocktailResponseSchema.safeParse(json);
-      if (!parseResult.success) throw new Error(parseResult.error.message);
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch cocktails");
+      }
+
+      const parseResult = CocktailResponseSchema.safeParse(
+        await response.json(),
+      );
+
+      if (!parseResult.success) {
+        throw new Error(parseResult.error.message);
+      }
 
       return parseResult.data;
     },
@@ -76,19 +86,20 @@ export const CocktailsList = () => {
           </SelectContent>
         </Select>
       </div>
-      {isLoading && (
+      {isLoading ? (
         <ul>
-          {Array.from({ length: 15 }).map((_, i) => (
-            <div key={i} className="flex gap-4 p-4 items-center">
-              <Skeleton className="w-24 h-24 rounded-lg" />
-              <Skeleton className="w-48 h-4" />
+          {Array.from({ length: 15 }).map((_, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <div key={index} className="flex items-center gap-4 p-4">
+              <Skeleton className="h-24 w-24 rounded-lg" />
+              <Skeleton className="h-4 w-48" />
               {/*{cocktail.alcoholic ? <Wine /> : <WineOff />}*/}
             </div>
           ))}
         </ul>
-      )}
-      {!cocktails && !isLoading && <p>No cocktails found.</p>}
-      {cocktails && (
+      ) : null}
+      {cocktails == null && !isLoading && <p>No cocktails found.</p>}
+      {cocktails != null && (
         <>
           <ul>
             {cocktails.data.map(({ id, ...rest }) => (
@@ -98,7 +109,7 @@ export const CocktailsList = () => {
 
           <Pagination>
             <PaginationContent>
-              {cocktails.meta.previousPageUrl && (
+              {cocktails.meta.previousPageUrl != null && (
                 <>
                   <PaginationItem>
                     <PaginationPrevious href={cocktails.meta.previousPageUrl} />
@@ -108,10 +119,10 @@ export const CocktailsList = () => {
                       <PaginationEllipsis />
                     </PaginationItem>
                   )}
-                  {!cocktails.meta.nextPageUrl && (
+                  {cocktails.meta.nextPageUrl == null && (
                     <PaginationItem>
                       <PaginationLink
-                        href={`/?page=${cocktails.meta.currentPage - 2}`}
+                        href={`/?page=${(cocktails.meta.currentPage - 2).toString()}`}
                       >
                         {cocktails.meta.currentPage - 2}
                       </PaginationLink>
@@ -129,17 +140,17 @@ export const CocktailsList = () => {
                   {cocktails.meta.currentPage}
                 </PaginationLink>
               </PaginationItem>
-              {cocktails.meta.nextPageUrl && (
+              {cocktails.meta.nextPageUrl == null ? null : (
                 <>
                   <PaginationItem>
                     <PaginationLink href={cocktails.meta.nextPageUrl}>
                       {cocktails.meta.currentPage + 1}
                     </PaginationLink>
                   </PaginationItem>
-                  {!cocktails.meta.previousPageUrl && (
+                  {cocktails.meta.previousPageUrl == null && (
                     <PaginationItem>
                       <PaginationLink
-                        href={`/?page=${cocktails.meta.currentPage + 2}`}
+                        href={`/?page=${(cocktails.meta.currentPage + 2).toString()}`}
                       >
                         {cocktails.meta.currentPage + 2}
                       </PaginationLink>
@@ -161,4 +172,4 @@ export const CocktailsList = () => {
       )}
     </>
   );
-};
+}

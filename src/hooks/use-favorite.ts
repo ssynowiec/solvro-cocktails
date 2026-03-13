@@ -5,12 +5,14 @@ const favoritesAtom = atomWithStorage<number[]>("favorites", []);
 
 const toggleFavoriteAtom = atom(null, (get, set, id: number) => {
   const favorites = get(favoritesAtom);
-  if (favorites.includes(id))
+  if (favorites.includes(id)) {
     set(
       favoritesAtom,
       favorites.filter((f) => f !== id),
     );
-  else set(favoritesAtom, [...favorites, id]);
+  } else {
+    set(favoritesAtom, [...favorites, id]);
+  }
 });
 
 export const useFavorite = () => {

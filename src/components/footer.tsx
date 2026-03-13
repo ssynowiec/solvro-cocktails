@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-export const Footer = () => {
+export function Footer() {
   return (
-    <footer className="text-center text-sm text-gray-500 py-4">
+    <footer className="py-4 text-center text-sm text-gray-500">
       <p>
         &copy; {new Date().getFullYear()}{" "}
         <Link
           href="https://ssynowiec.dev"
-          className="underline underline-offset-2 font-medium"
+          className="font-medium underline underline-offset-2"
         >
           {" "}
           Stanisław Synowiec
@@ -16,4 +16,4 @@ export const Footer = () => {
       </p>
     </footer>
   );
-};
+}
