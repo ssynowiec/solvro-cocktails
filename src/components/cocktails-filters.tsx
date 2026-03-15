@@ -1,7 +1,9 @@
+import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Separator } from "@/components/ui/separator";
 import { categories } from "@/constants/categories";
 import { useFilters } from "@/hooks/use-filters";
 
@@ -19,7 +21,8 @@ export function CocktailsFilters() {
       <Input
         type="search"
         placeholder="Search..."
-        defaultValue={search}
+        // defaultValue={search}
+        value={search}
         onChange={handleSearchChange}
       />
       <div className="space-y-3">
@@ -62,6 +65,7 @@ export function CocktailsFilters() {
           </div>
         </RadioGroup>
       </div>
+      <Separator />
       <div className="space-y-3">
         <h4 className="text-foreground text-sm font-medium">
           Cocktail category
