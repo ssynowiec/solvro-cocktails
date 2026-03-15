@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import { IngredientResponseSchema } from "@/types/ingredient";
+
 export const CocktailResponseSchema = z.object({
   data: z.array(
     z.object({
@@ -24,6 +26,21 @@ export const CocktailResponseSchema = z.object({
     perPage: z.number(),
     previousPageUrl: z.string().nullable(),
     total: z.number(),
+  }),
+});
+
+export const CocktailDetailsResponseSchema = z.object({
+  data: z.object({
+    id: z.number(),
+    name: z.string(),
+    category: z.string(),
+    glass: z.string(),
+    instructions: z.string(),
+    imageUrl: z.string(),
+    alcoholic: z.boolean(),
+    createdAt: z.string(),
+    updatedAt: z.string(),
+    ingredients: z.array(IngredientResponseSchema),
   }),
 });
 
