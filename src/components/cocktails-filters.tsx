@@ -15,13 +15,13 @@ export function CocktailsFilters() {
     handleAlcoholicChange,
     categories: categoriesFilters,
     handleCategoriesChange,
+    clearAllFilters,
   } = useFilters();
   return (
     <aside className="flex w-full flex-col gap-4 lg:sticky lg:top-16 lg:h-fit lg:w-1/4 lg:min-w-[25vw]">
       <Input
         type="search"
         placeholder="Search..."
-        // defaultValue={search}
         value={search}
         onChange={handleSearchChange}
       />
@@ -94,6 +94,12 @@ export function CocktailsFilters() {
             </div>
           ))}
         </div>
+      </div>
+      <Separator />
+      <div className="space-y-2">
+        <Button onClick={async () => clearAllFilters()}>
+          Clear all filters
+        </Button>
       </div>
     </aside>
   );

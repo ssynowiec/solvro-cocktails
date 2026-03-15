@@ -49,6 +49,13 @@ export const useFilters = () => {
     await setPage(1);
   };
 
+  const clearAllFilters = async () => {
+    await setSearch("");
+    await setAlcoholic("all");
+    await setCategories([]);
+    await setPage(1);
+  };
+
   return {
     search,
     handleSearchChange,
@@ -56,5 +63,6 @@ export const useFilters = () => {
     handleAlcoholicChange,
     categories,
     handleCategoriesChange,
+    clearAllFilters,
   };
 };
