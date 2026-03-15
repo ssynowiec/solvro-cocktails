@@ -3,8 +3,8 @@
 [![wakatime](https://wakatime.com/badge/user/d24ea02b-384a-485f-82a0-2412b4e62c5e/project/2ddad75a-8edb-406d-bcb2-f7cb0c082e1b.svg)](https://wakatime.com/badge/user/d24ea02b-384a-485f-82a0-2412b4e62c5e/project/2ddad75a-8edb-406d-bcb2-f7cb0c082e1b)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cocktails-solvro.ssynowiec.dev/repo-cover-dark.png">
-  <img alt="Screenshot" src="https://cocktails-solvro.ssynowiec.dev/repo-cover-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="https://dev.cocktails-solvro.ssynowiec.dev/repo-cover-dark.png">
+  <img alt="Screenshot" src="https://dev.cocktails-solvro.ssynowiec.dev/repo-cover-light.png">
 </picture>
 
 [//]: # "![Screenshot](https://cocktails-solvro.ssynowiec.dev/repo-cover.png)"
@@ -34,5 +34,7 @@ For prettier, eslint, linter and github actions used `@solvro/config` package.
 - Light/dark mode
 - Responsive design for mobile and desktop
 - Pagination for cocktail list
+- cocktail details
+- clear all filters
 - env variable validation
 - api response validation
