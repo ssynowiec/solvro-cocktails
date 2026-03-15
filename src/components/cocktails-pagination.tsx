@@ -31,7 +31,7 @@ export function CocktailsPagination({
 
   return (
     <div className="flex w-full flex-col items-center gap-4 pt-6 sm:flex-row sm:justify-between">
-      <div className="flex w-full items-center gap-4">
+      <div className="flex w-full flex-col items-center gap-4 md:flex-row">
         <p className="text-muted-foreground w-auto text-center text-sm md:text-left">
           Showing{" "}
           <span className="text-foreground font-medium">
