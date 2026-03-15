@@ -2,11 +2,14 @@
 
 [![wakatime](https://wakatime.com/badge/user/d24ea02b-384a-485f-82a0-2412b4e62c5e/project/2ddad75a-8edb-406d-bcb2-f7cb0c082e1b.svg)](https://wakatime.com/badge/user/d24ea02b-384a-485f-82a0-2412b4e62c5e/project/2ddad75a-8edb-406d-bcb2-f7cb0c082e1b)
 
-![Screenshot](https://cocktails-solvro.ssynowiec.dev/repo-cover.png)
+![Screenshot](https://cocktails-solvro.ssynowiec.dev/repo-cover-dark.png#gh-dark-mode-only)
+![Screenshot](https://cocktails-solvro.ssynowiec.dev/repo-cover-light.png#gh-light-mode-only)
+
+[//]: # "![Screenshot](https://cocktails-solvro.ssynowiec.dev/repo-cover.png)"
 
 This repository contains the code for the Cocktails KN Solvro project, which is recruitment task for [KN Solvro](https://solvro.pwr.edu.pl/pl/). The project based on [Solvro Cocktails API](https://cocktails.solvro.pl/)
 
-## Live demo: [https://cocktails-solvro.ssynowiec.dev/](https://cocktails-solvro.ssynowiec.dev/)
+## Live demo: [https://dev.cocktails-solvro.ssynowiec.dev/](https://dev.cocktails-solvro.ssynowiec.dev/)
 
 ## Technology stack
 
