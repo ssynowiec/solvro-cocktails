@@ -10,9 +10,9 @@ export function CocktailsFilters() {
     search,
     handleSearchChange,
     alcoholic,
-    setAlcoholic,
+    handleAlcoholicChange,
     categories: categoriesFilters,
-    setCategories,
+    handleCategoriesChange,
   } = useFilters();
   return (
     <aside className="flex w-full flex-col gap-4 lg:sticky lg:top-16 lg:h-fit lg:w-1/4 lg:min-w-[25vw]">
@@ -27,7 +27,7 @@ export function CocktailsFilters() {
         <RadioGroup
           value={alcoholic}
           onValueChange={async (value) =>
-            setAlcoholic(
+            handleAlcoholicChange(
               value === "all" ? null : (value as "alcoholic" | "non-alcoholic"),
             )
           }
@@ -73,7 +73,7 @@ export function CocktailsFilters() {
                 id={category}
                 checked={categoriesFilters.includes(category)}
                 onCheckedChange={async (checked) => {
-                  await setCategories((previous) => {
+                  await handleCategoriesChange((previous) => {
                     if (checked === true) {
                       return [...new Set([...previous, category])];
                     }

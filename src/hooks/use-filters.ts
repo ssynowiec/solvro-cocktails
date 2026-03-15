@@ -23,17 +23,38 @@ export const useFilters = () => {
     ),
   );
 
+  const handleAlcoholicChange = async (
+    value:
+      | "all"
+      | "alcoholic"
+      | "non-alcoholic"
+      | ((
+          old: "all" | "alcoholic" | "non-alcoholic",
+        ) => "all" | "alcoholic" | "non-alcoholic" | null)
+      | null,
+  ) => {
+    await setAlcoholic(value);
+    await setPage(1);
+  };
+
   const [categories, setCategories] = useQueryState(
     "category",
     parseAsArrayOf(parseAsStringLiteral(categoriesArray)).withDefault([]),
   );
 
+  const handleCategoriesChange = async (
+    value: string[] | ((old: string[]) => string[] | null) | null,
+  ) => {
+    await setCategories(value);
+    await setPage(1);
+  };
+
   return {
     search,
     handleSearchChange,
     alcoholic,
-    setAlcoholic,
+    handleAlcoholicChange,
     categories,
-    setCategories,
+    handleCategoriesChange,
   };
 };
