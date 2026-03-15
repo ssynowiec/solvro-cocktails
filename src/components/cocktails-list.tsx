@@ -13,17 +13,24 @@ import { usePage } from "@/hooks/use-page";
 import { CocktailResponseSchema } from "@/types/cocktail";
 
 export function CocktailsList() {
-  const { page } = usePage();
+  const { page, perPage } = usePage();
   const { search, alcoholic, categories } = useFilters();
   const [debouncedSearch] = useDebounce(search, 1000);
 
   const alcoholicFilter = alcoholic === "all" ? "" : alcoholic;
 
   const { data: cocktails, isLoading } = useQuery({
-    queryKey: ["cocktails", page, debouncedSearch, alcoholicFilter, categories],
+    queryKey: [
+      "cocktails",
+      page,
+      debouncedSearch,
+      alcoholicFilter,
+      categories,
+      perPage,
+    ],
     queryFn: async () => {
       const response = await fetch(
-        `${env.NEXT_PUBLIC_API_URL}/cocktails/?page=${page.toString()}&alcoholic=${alcoholicFilter}&category=${categories.join(",")}&name=%${debouncedSearch}%`,
+        `${env.NEXT_PUBLIC_API_URL}/cocktails/?page=${page.toString()}&perPage=${perPage.toString()}&alcoholic=${alcoholicFilter}&category=${categories.join(",")}&name=%${debouncedSearch}%`,
       );
 
       if (!response.ok) {
