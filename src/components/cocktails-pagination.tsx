@@ -29,7 +29,10 @@ export function CocktailsPagination({
         <span className="text-foreground font-medium">
           {(page - 1) * perPage + 1}
         </span>{" "}
-        - <span className="text-foreground font-medium">{page * perPage}</span>{" "}
+        -{" "}
+        <span className="text-foreground font-medium">
+          {page === lastPage ? total : page * perPage}
+        </span>{" "}
         from <span className="text-foreground font-medium">{total}</span>{" "}
       </p>
 
