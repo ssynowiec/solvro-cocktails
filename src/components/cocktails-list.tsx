@@ -45,7 +45,9 @@ export function CocktailsList() {
   return (
     <>
       <div className="flex flex-col gap-8 lg:flex-row">
-        <CocktailsFilters />
+        <div className="hidden md:block">
+          <CocktailsFilters />
+        </div>
         <section className="w-full lg:w-3/4">
           {isLoading ? (
             <ul className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">

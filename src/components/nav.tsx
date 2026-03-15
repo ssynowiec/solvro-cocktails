@@ -1,3 +1,4 @@
+import { MobileFilters } from "@/components/mobile-filters";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Nav() {
@@ -6,6 +7,7 @@ export function Nav() {
       <h1>Cocktails KN Solvro</h1>
       <div className="ml-auto">
         <ThemeToggle />
+        <MobileFilters />
       </div>
     </nav>
   );
