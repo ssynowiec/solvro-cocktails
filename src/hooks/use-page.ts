@@ -6,5 +6,15 @@ export const usePage = () => {
     parseAsInteger.withDefault(1).withOptions({ shallow: false }),
   );
 
-  return { page, setPage };
+  const [perPage, setPerPage] = useQueryState(
+    "perPage",
+    parseAsInteger.withDefault(15).withOptions({ shallow: false }),
+  );
+
+  const handleChangePerPage = async (newPerPage: number) => {
+    await setPerPage(newPerPage);
+    await setPage(1);
+  };
+
+  return { page, setPage, perPage, handleChangePerPage };
 };
