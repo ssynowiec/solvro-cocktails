@@ -40,7 +40,7 @@
   "devDependencies": {
     "@commitlint/cli": "^20.4.4",
     "@next/eslint-plugin-next": "^16.1.6",
-    "@solvro/config": "^2.1.1",
+    "@solvro/config": "^2.3.0",
     "@tailwindcss/postcss": "^4",
     "@tanstack/eslint-plugin-query": "^5.91.4",
     "@types/node": "^25.3.5",
