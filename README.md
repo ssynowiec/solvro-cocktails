@@ -29,3 +29,5 @@ For prettier, eslint, linter and github actions used `@solvro/config` package.
 - Pagination for cocktail list
 - env variable validation
 - api response validation
+
+### An extended version that took me more than 8 hours to create is available in [dev branch](https://github.com/ssynowiec/solvro-cocktails/tree/dev) and [dev branch live demo](https://dev.cocktails-solvro.ssynowiec.dev/).
